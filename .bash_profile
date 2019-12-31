@@ -85,6 +85,7 @@ alias clean_containers="docker rm $(docker ps -a -q)"
 alias centos7="docker run -ti nexus.dev.norvax.net:8082/gohealth/centos-7"
 #alias ubuntu="docker run -ti -v ~/Downloads:/downloads nexus.dev.norvax.net:8082/gohealth/ubuntu"
 alias ubuntu="docker run -ti -v /Users/rrafacz/SRE/bitbucket/packer:/packer nexus.dev.norvax.net:8082/gohealth/ubuntu"
+alias docker_mysql="docker run --env-file /Users/rrafacz/workspaces/docker-percona-mysql/env.prop -v /tmp/mysql_dir:/opt/mysql_tools --name mysql -d nexus.dev.norvax.net:8082/gohealth/percona-mysql-5.7"
 alias clean_images="docker rm $(docker ps -q -f status=exited)"
 
 ######################## # Go Paths ########################
